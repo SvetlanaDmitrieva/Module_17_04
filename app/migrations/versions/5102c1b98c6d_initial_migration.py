@@ -37,7 +37,7 @@ def upgrade() -> None:
     sa.Column('content', sa.String(), nullable=True),
     sa.Column('priority', sa.Integer(), nullable=True),
     sa.Column('completed', sa.Boolean(), nullable=True),
-    sa.Column('user_id', sa.Integer(), nullable=True),
+    sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('slug', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
